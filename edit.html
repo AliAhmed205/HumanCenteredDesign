@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pas kleding aan</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Terug naar de vorige pagina.">&#8249;</a>
+            <h1>Sightless</h1>
+        </nav>
+    </header>
+    <main>
+        <form id="filtering">
+            <!-- <label for="filterRecent">Sorteer op Datum</label> -->
+            <select name="orderDate" id="filterRecent">
+                <option value="oldest">Oudste eerst</option>
+                <option value="newest">Nieuwste eerst</option>
+            </select>
+
+            <!-- <label for="filterKleur">Sorteer op Kleur</label> -->
+            <select name="orderColor" id="filterKleur">
+                <option value="">Kies kleur</option>
+                <option value="#FF0000">Rood</option>
+                <option value="#0000FF">Blauw</option>
+                <option value="#008000">Groen</option>
+                <option value="#FFFF00">Geel</option>
+                <option value="#FFA500">Oranje</option>
+                <option value="#800080">Paars</option>
+                <option value="#FFC0CB">Roze</option>
+                <option value="#000000">Zwart</option>
+                <option value="#40E0D0">Turkwaas</option>
+                <option value="#FFFFFF">Wit</option>
+                <option value="#A52A2A">Bruin</option>
+                <option value="#808080">Grijs</option>
+                <option value="#F5F5DC">Beige</option>
+            </select>
+            <select name="orderType" id="filterKleding">
+                <option value="">Kies kleding</option>
+                <option value="t-shirts">T-shirt</option>
+                <option value="overhemden">Overhemd</option>
+                <option value="broeken">Broek</option>
+                <option value="jeans">Jeans</option>
+                <option value="jurken">Jurk</option>
+                <option value="rokken">Rok</option>
+                <option value="truien">Trui</option>
+                <option value="vesten">Vest</option>
+                <option value="jassen">Jas</option>
+                <option value="blazer">Blazer</option>
+                <option value="hoodies">Hoedie</option>
+                <option value="shorts">Shorts</option>
+                <option value="leggings">Legging</option>
+                <option value="ondergoed">Ondergoed</option>
+                <option value="sokken">Sokken</option>
+                <option value="schoenen">Schoenen</option>
+                <option value="sjaals">Sjaal</option>
+                <option value="handschoenen">Handschoenen</option>
+                <option value="hoeden">Hoed</option>
+                <option value="zonnebrillen">Zonnebril</option>
+            </select>
+            <select name="orderStyle" id="filterStyle">
+                <option value="">Kies stijl</option>
+                <option value="casual">Casual</option>
+                <option value="feestelijk">Feestelijk</option>
+                <option value="zakelijk">Zakelijk</option>
+                <option value="begravenis">begravenis</option>
+                <option value="geenVoorkeur">Geen-voorkeur</option>
+            </select>
+        </form>
+        <ul id="display-section"></ul>
+    </main>
+    <footer></footer>
+    <div id="backgroundImage">
+    </div>
+    <script src="./saved.js"></script>
+</body>
+
+</html>
