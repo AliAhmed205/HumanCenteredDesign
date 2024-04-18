@@ -53,6 +53,7 @@ header {
             text-align: center;
             margin: 0;
             font-size: 1.2rem;
+            font-family: var(--sightless-paragraph);
         }
 
         a {
@@ -98,6 +99,7 @@ main {
                 text-align: center;
                 background-color: white;
                 border-radius: 10px;
+                border: solid 1.5px black;
                 font-family: var(--sightless-paragraph);
                 font-weight: 900;
                 padding: 1rem;
@@ -186,9 +188,12 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: white;
+    border-top: solid var(--sightless-font-color) 1px;
+
     p {
         text-align: center;
         color: var(--sightless-font-color);
+        font-family: var(--sightless-paragraph);
     }
 }
 
@@ -228,7 +233,6 @@ footer {
         outline: none;
         background-color: var(--sightless-font-color);
         color: lightyellow;
-        font-size: 1.5rem;
     }
 
     textarea {
@@ -322,47 +326,54 @@ footer {
 
 #outfitInstellen {
 
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 0;
+        font-family: var(--sightless-paragraph);
+
+    }
 
     h2 {
         text-align: center;
         font-size: 1.2rem;
         width: 80%;
-        font-weight: 600;
+        font-weight: 200;
+        font-size: 1.1rem;
         font-family: var(--sightless-paragraph);
-        margin: 2rem auto 0 auto;
+        margin: 1rem auto 2rem auto;
     }
 
     ul {
-        list-style-type: none;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-        width: 100%;
         padding: 0;
-        margin: 2.5rem 0 0 0;
+        list-style-type: none;
+        gap: 1rem;
 
         li {
+            text-align: center;
+            /* padding: 1rem 2rem; */
+            margin: 0 2rem;
 
             button {
-                width: 18rem;
-                padding: 1.5rem 2rem;
-                box-sizing: border-box;
-                border-radius: 1rem;
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: var(--sightless-font-color);
                 font-family: var(--sightless-paragraph);
-                background-color: var(--sightless-font-color);
-                color: var(--sightless-white);
-                font-size: 1.3rem;
-                letter-spacing: .2rem;
-                transition: .5s ease-out;
-                border: solid #24242400 2px;
-
+                font-weight: 600;
+                padding: 1rem 2rem;
+                background-color: white;
+                font-size: 1.2rem;
+                box-shadow: rgba(128, 128, 128, 0.139) 0 0 20px;
+                border-radius: 100px;
+                transition: .5s;
             }
 
             button:focus {
-                background-color: white;
-                border: solid var(--sightless-font-color) 2px;
-                color: var(--sightless-font-color);
+                background-color: var(--sightless-font-color);
+                color: white;
             }
         }
     }
@@ -393,11 +404,11 @@ footer {
             li {
                 /* padding: 1rem 0; */
                 list-style-type: none;
-                margin: 1rem 0;           
+                margin: 1rem 0;
             }
         }
 
-        button { 
+        button {
             margin-left: auto;
             display: flex;
             padding: .8rem 2em;
@@ -416,7 +427,7 @@ footer {
     justify-content: center; */
     display: grid;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 1rem 2rem;
 
     select {
         padding: 1rem .5rem;
@@ -429,3 +440,122 @@ footer {
 }
 
 
+
+#clothingOptions {
+
+    display: none;
+
+    h2 {
+        text-align: center;
+        margin: 2rem 1rem;
+        font-family: var(--sightless-paragraph);
+        font-size: 1.3rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        list-style-type: none;
+        gap: 1rem;
+
+        li {
+            text-align: center;
+            /* padding: 1rem 2rem; */
+            margin: 0 2rem;
+
+            button {
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: var(--sightless-font-color);
+                font-family: var(--sightless-paragraph);
+                font-weight: 600;
+                padding: 1rem 2rem;
+                background-color: white;
+                font-size: 1.2rem;
+                box-shadow: rgba(128, 128, 128, 0.139) 0 0 20px;
+                border-radius: 100px;
+                transition: .5s;
+            }
+
+            button:focus {
+                background-color: var(--sightless-font-color);
+                color: white;
+            }
+        }
+    }
+
+}
+
+.results {
+
+    section {
+        display: flex;
+    }
+
+    ul {
+        padding: 0;
+        text-align: center;
+
+        li {
+            list-style-type: none;
+            display: block;
+            margin: 2rem;
+
+
+            button {
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: var(--sightless-font-color);
+                font-family: var(--sightless-paragraph);
+                font-weight: 600;
+                padding: 1rem 2rem;
+                background-color: white;
+                font-size: 1.2rem;
+                box-shadow: rgba(128, 128, 128, 0.139) 0 0 20px;
+                border-radius: 100px;
+                transition: .5s;
+            }
+
+            button:focus {
+                background-color: var(--sightless-font-color);
+                color: white;
+            }
+        }
+    }
+}
+
+.noResults {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    p {
+        font-size: 1.3rem;
+        font-family: var(--sightless-paragraph);
+    }
+
+    a {
+        margin: 0 7rem;
+        padding: 1rem;
+        color: var(--sightless-font-color);
+        background-color: white;
+        font-size: 1.3rem;
+        border-radius: 100px;
+        font-family: var(--sightless-paragraph);
+        font-weight: 600;
+        border: solid 1px black;
+        text-decoration: none;
+        transition: .5s;
+    }
+
+    a:focus {
+        background-color: var(--sightless-font-color);
+        color: white;
+    }
+
+
+}

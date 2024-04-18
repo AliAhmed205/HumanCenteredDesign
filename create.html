@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -12,47 +11,63 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
 </head>
+
 <body>
-<header>
-    <nav>
-        <h1>Sightless</h1>
-        <p>Blind in stijl, nooit uit de mode.</p>
-    </nav>
-</header>
-<main>
-<!------------------ Outfit instellen --------------->
-        <section id="outfitInstellen">
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Terug naar de vorige pagina.">&#8249;</a>
+            <h1>Sightless</h1>
+            <p>Blind in stijl, nooit uit de mode.</p>
+        </nav>
+    </header>
+    <main>
+        <!------------------ Outfit instellen --------------->
+        <section id="outfitInstellen" class="step">
+            <h1>Creëer een outfit</h1>
             <h2>Welkom, Petra. Ik help je graag bij het samenstellen van je outfit. Je kunt navigeren door naar links
                 te vegen om omhoog te gaan en naar rechts om omlaag te gaan.</h2>
             <ul>
                 <!---- Casual optie--->
-                <li><button id="casualBtn" aria-label="Casual. Iets allerdaags maar nog wel stijlvol"
-                        data-value="casual" type="button">casual</button></li>
+                <li><button id="casual" aria-label="Casual. Iets allerdaags maar nog wel stijlvol"
+                        value="casual" >Casual</button></li>
 
                 <!---- Feestelijk optie--->
-                <li><button id="festiveBtn" aria-label="Feestelijk. Kleding voor vieringen en feesten"
-                        data-value="feestelijk" type="button">feestelijk</button></li>
+                <li><button id="feestelijk" aria-label="Feestelijk. Kleding voor vieringen en feesten"
+                        value="feestelijk">Feestelijk</button></li>
 
                 <!---- Zakelijk optie--->
-                <li><button id="businessBtn" aria-label="Zakelijk. Voor functionele gesprekken of beroepszaken"
-                        data-value="zakelijk" type="button">zakelijk</button></li>
+                <li><button id="zakelijk" aria-label="Zakelijk. Voor functionele gesprekken of beroepszaken"
+                        value="zakelijk">Zakelijk</button></li>
 
                 <!---- Begravenis optie--->
-                <li><button id="funeral" aria-label="begrafenis. Kleding voor uitvaarten of dergelijke ceremonies"
-                        data-value="begrafenis" type="button">begravenis</button></li>
+                <li><button id="begrafenis" aria-label="begrafenis. Kleding voor uitvaarten of dergelijke ceremonies"
+                        valzakelijkue="begrafenis">Begravenis</button></li>
 
                 <!---- Geen voorkeur optie--->
-                <li><button id="standard" aria-label="Geen-voorkeur. Alle kledingstijlen beschikbaar"
-                        data-value="niet-relevant" type="button">geen-voorkeur</button></li>
+                <li><button id="standaard" aria-label="Geen-voorkeur. Alle kledingstijlen beschikbaar"
+                        value="standaard">Geen-voorkeur</button></li>
             </ul>
         </section>
+
+        <section id="clothingOptions" class="step">
+            <h2>Top! Kies een van volgende kleding opties om mee te beginnen</h2>
+                <ul>
+                    <li><button id="hoofddeksel" type="button">Hoofddeksel</button></li>
+                    <li><button id="bovenkleding" type="button">Bovenkleding</button></li>
+                    <li><button id="onderkleding" type="button">Onderkleding</button></li>
+                    <li><button id="schoeisel" type="button">Schoeisel</button></li>
+                    <li><button id="accessoires" type="button">Accessoires</button></li>
+                    <li><button class="terug" type="button">Terug</button></li>
+                </ul>
+            </section>
+            
     </main>
     <footer>
         <p>© Ali Ahmed 2024</p>
     </footer>
     <div id="backgroundImage">
     </div>
-        <script src="./script.js"></script>
-    </body>
+    <script src="./create.js"></script>
+</body>
 
-    </html>
+</html>

@@ -9,42 +9,72 @@ const outfitBtn = document.getElementById('buttonCreate')
 window.addEventListener('DOMContentLoaded', function () {
     const savedFormData = JSON.parse(localStorage.getItem('formData'));
 
-    if (savedFormData) {
+    if (document.getElementById('display-section')) {
         document.getElementById('kledingstuk').value = savedFormData.kledingstuk || document.getElementById('kledingstuk').options[0].value;
         document.getElementById('kleur').value = savedFormData.kleur || document.getElementById('kleur').options[0].value;
         document.getElementById('stof').value = savedFormData.stof || document.getElementById('stof').options[0].value;
         document.getElementById('seizoen').value = savedFormData.seizoen || document.getElementById('seizoen').options[0].value;
         document.getElementById('typeKleding').value = savedFormData.typeKleding || document.getElementById('typeKleding').options[0].value;
-        document.getElementById('extra-details').value = savedFormData.extraDetails || '';
+        document.getElementById('extraDetails').value = savedFormData.extraDetails || '';
     }
 
     const kledingFormulier = document.getElementById('kledingFormulier');
     if (kledingFormulier) {
-        kledingFormulier.addEventListener('submit', function(event) {
+        kledingFormulier.addEventListener('submit', function (event) {
             event.preventDefault(); // Voorkom standaardformulierverzending
 
-            saveFormData(); // Roep de functie aan om de formuliergegevens op te slaan
+            saveFormData(kledingFormulier); // Roep de functie aan om de formuliergegevens op te slaan
 
             // Alert weergeven
             alert('Kledingstuk toegevoegd!');
 
             // Redirect naar index.html na het verzenden van het formulier
-            window.location.href = 'index.html';
+            // window.location.href = 'index.html';
         });
     }
 });
 
-function saveFormData() {
-    const newFormData = {
-        kledingstuk: document.getElementById('kledingstuk').value,
-        kleur: document.getElementById('kleur').value,
-        stof: document.getElementById('stof').value,
-        seizoen: document.getElementById('seizoen').value,
-        typeKleding: document.getElementById('typeKleding').value,
-        extraDetails: document.getElementById('extra-details').value,
-        date: new Date()
-    };
+const clothingTypes = {
+    't-shirt': 'bovenkleding',
+    overhemd: 'bovenkleding',
+    broek: 'onderkleding',
+    jeans: 'onderkleding',
+    jurk: 'onderkleding',
+    rok: 'onderkleding',
+    trui: 'bovenkleding',
+    vest: 'bovenkleding',
+    jas: 'bovenkleding',
+    baret: 'hoofddeksel',
+    bleezer: 'bovenkleding',
+    hoodie: 'bovenkleding',
+    handtas: 'accessoires',
+    short: 'onderkleding',
+    leggings: 'onderkleding',
+    ondergoed: 'onderkleding',
+    sokken: 'accessoires',
+    schoenen: 'schoeisel',
+    sjaal: 'accessoires',
+    handschoenen: 'accessoires',
+    hoed: 'hoofddeksel',
+    zonnebril: 'accessoires',
+    muts: 'hoofddeksel',
+}
 
+
+
+
+function saveFormData(kledingFormulier) {
+    const inputs = kledingFormulier.querySelectorAll('select, textarea')
+    const newFormData = {
+        date: new Date(),
+        type: clothingTypes[document.getElementById('kledingstuk').value]
+    };
+    if (inputs) {
+        inputs.forEach(input => {
+            newFormData[input.id] = input.value
+        })
+    }
+    console.log(newFormData);
     let savedData = JSON.parse(localStorage.getItem('formData'));
 
     if (!Array.isArray(savedData)) {
@@ -55,4 +85,3 @@ function saveFormData() {
 
     localStorage.setItem('formData', JSON.stringify(savedData));
 }
-
