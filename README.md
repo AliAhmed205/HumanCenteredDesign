@@ -4,7 +4,7 @@
 
 ## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2"> Features 
 
-| 👠 Features | 
+|  Features | 
 | ----------- | 
 | Register your new clothes | 
 | Filter through your own digital closet |
@@ -17,3 +17,34 @@
 
 ## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2"> Why Sightless? 
 <p>The choice of the name "Slightless" for a fashion and clothing app for the visually impaired holds a profound significance. The word "Slightless" cleverly combines "sight" and "less," encapsulating the essence of the app's purpose. By catering to individuals who may lack full sight, "Slightless" embodies the idea of transcending physical limitations and embracing inclusivity. It communicates the message that despite visual impairment, one can still engage with and enjoy fashion. Additionally, the name suggests a sense of empowerment, as users can navigate the world of fashion confidently and independently through the app, regardless of their visual abilities.
+
+## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2">  How is Sightless made? 
+
+<p>With the help of standard HTML, CSS and JavaScript, Sightless was created. While the real thing would be linked to an actual database, this demo of Sightless saves the user's clothing in the localStorage. It also retrieves the user's data from the storage, displaying it in a JSON-like fahsion for a clear presentation.</p>
+
+### Saving the data
+
+```JS
+const savedFormData = JSON.parse(localStorage.getItem('formData'));
+ 
+let savedData = JSON.parse(localStorage.getItem('formData'));
+
+    if (!Array.isArray(savedData)) {
+        savedData = [];
+    }
+
+savedData.push(newFormData);
+
+```
+
+### Retrieving the data 
+
+```JS
+window.addEventListener('DOMContentLoaded', function () {
+    displaySavedFormData();
+});
+```
+
+
+
+
