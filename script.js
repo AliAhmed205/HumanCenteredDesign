@@ -28,6 +28,9 @@ window.addEventListener('DOMContentLoaded', function () {
             // Alert weergeven
             alert('Kledingstuk toegevoegd!');
 
+            kledingFormulier.reset();
+
+
             // Redirect naar index.html na het verzenden van het formulier
             // window.location.href = 'index.html';
         });

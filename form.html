@@ -2,125 +2,133 @@
 <html lang="nl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sightless</title>
-    <script>
-        document.documentElement.classList.remove('no-js')
-    </script>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sightless</title>
+  <script>
+    document.documentElement.classList.remove('no-js')
+  </script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="index.html" aria-label="Terug naar de vorige pagina.">&#8249;</a>
-            <h1 aria-hidden="true">Sightless</h1>
-            <p aria-hidden="true">Blind in stijl, nooit uit de mode.</p>
-        </nav>
-    </header>
-    <main>
-        <!------- Toevoegen van nieuwe kleding ------>
-        <form id="kledingFormulier" action="#" method="post">
-            <p></p>
-            <label aria-label="Kies het soort kledingstuk dat je wilt registreren" for="kledingstuk">Kies een kledingstuk</label>
-            <select id="kledingstuk">
-                <option value="">Kies kleding</option>
-                <option  value="t-shirt">T-shirt</option>
-                <option value="overhemd">Overhemd</option>
-                <option  value="broek">Broek</option>
-                <option  value="jeans">Jeans</option>
-                <option  value="jurk">Jurk</option>
-                <option  value="rok">Rok</option>
-                <option  value="trui">Trui</option>
-                <option  value="vest">Vest</option>
-                <option  value="jas">Jas</option>
-                <option  value="baret">Baret</option>
-                <option  value="handtas">Handtas</option>
-                <option  value="bleezer">Bleezer</option>
-                <option  value="hoodie">Hoedie</option>
-                <option  value="short">Shorts</option>
-                <option  value="leggings">Legging</option>
-                <option  value="ondergoed">Ondergoed</option>
-                <option  value="sokken">Sokken</option>
-                <option  value="schoenen">Schoenen</option>
-                <option  value="sjaal">Sjaal</option>
-                <option  value="handschoenen">Handschoenen</option>
-                <option  value="hoed">Hoed</option>
-                <option  value="zonnebril">Zonnebril</option>
-                <option  value="muts">muts</option>
-            </select>
+  <header>
+    <nav>
+      <a href="index.html" aria-label="Terug naar de vorige pagina.">&#8249;</a>
+      <h1 aria-hidden="true">Sightless</h1>
+      <p aria-hidden="true">Blind in stijl, nooit uit de mode.</p>
+    </nav>
+  </header>
+  <main id="formRegister">
+    <!------- Toevoegen van nieuwe kleding ------>
+    <form id="kledingFormulier" action="#" method="post">
+      <p></p>
+      <label aria-label="Kies het soort kledingstuk dat je wilt registreren" for="kledingstuk">Kies een
+        kledingstuk</label>
+      <select required id="kledingstuk">
+        <option value="">Kies kleding</option>
+        <option value="t-shirt">T-shirt</option>
+        <option value="overhemd">Overhemd</option>
+        <option value="broek">Broek</option>
+        <option value="jeans">Jeans</option>
+        <option value="jurk">Jurk</option>
+        <option value="rok">Rok</option>
+        <option value="trui">Trui</option>
+        <option value="vest">Vest</option>
+        <option value="jas">Jas</option>
+        <option value="baret">Baret</option>
+        <option value="handtas">Handtas</option>
+        <option value="bleezer">Bleezer</option>
+        <option value="hoodie">Hoedie</option>
+        <option value="short">Shorts</option>
+        <option value="leggings">Legging</option>
+        <option value="ondergoed">Ondergoed</option>
+        <option value="sokken">Sokken</option>
+        <option value="schoenen">Schoenen</option>
+        <option value="sjaal">Sjaal</option>
+        <option value="handschoenen">Handschoenen</option>
+        <option value="hoed">Hoed</option>
+        <option value="zonnebril">Zonnebril</option>
+        <option value="muts">muts</option>
+      </select>
 
-            <label aria-label="Kies de kleur van jouw kledingstuk. Het mag ook een kleur zijn die in de buurt komt van jouw kleding stuk" for="kleur">Kies een kleur</label>
-            <select id="kleur">
-                <option value="#FF0000">Rood</option>
-                <option value="#0000FF">Blauw</option>
-                <option value="#008000">Groen</option>
-                <option value="#FFFF00">Geel</option>
-                <option value="#FFA500">Oranje</option>
-                <option value="#800080">Paars</option>
-                <option value="#FFC0CB">Roze</option>
-                <option value="#000000">Zwart</option>
-                <option value="#40E0D0">Turkwaas</option>
-                <option value="#FFFFFF">Wit</option>
-                <option value="#A52A2A">Bruin</option>
-                <option value="#808080">Grijs</option>
-                <option value="#F5F5DC">Beige</option>
-            </select>
-
-
-            <label aria-label="Kies het soort materiaal van jouw kledingstuk" for="stof">Kies een stof</label>
-            <select id="stof">
-                <option value="katoen">Katoen</option>
-                <option value="polyester">Polyester</option>
-                <option value="wol">Wol</option>
-                <option value="zijde">Zijde</option>
-                <option value="linnen">Linnen</option>
-                <option value="fluweel">Fluweel</option>
-                <option value="denim">Denim</option>
-                <option value="leer">Leer</option>
-                <option value="satijn">Satijn</option>
-                <option value="kant">Kant</option>
-                <option value="corduroy">Corduroy</option>
-                <option value="chiffon">Chiffon</option>
-            </select>
+      <label
+        aria-label="Kies de kleur van jouw kledingstuk. Het mag ook een kleur zijn die in de buurt komt van jouw kleding stuk"
+        for="kleur">Kies een kleur</label>
+      <select required id="kleur">
+        <option value="">Kies een kleur</option>
+        <option value="#FF0000">Rood</option>
+        <option value="#0000FF">Blauw</option>
+        <option value="#008000">Groen</option>
+        <option value="#FFFF00">Geel</option>
+        <option value="#FFA500">Oranje</option>
+        <option value="#800080">Paars</option>
+        <option value="#FFC0CB">Roze</option>
+        <option value="#000000">Zwart</option>
+        <option value="#40E0D0">Turkwaas</option>
+        <option value="#FFFFFF">Wit</option>
+        <option value="#A52A2A">Bruin</option>
+        <option value="#808080">Grijs</option>
+        <option value="#F5F5DC">Beige</option>
+      </select>
 
 
-            <label aria-label="Kies het passende seizoen van jouw kledingstuk." for="seizoen">Kies het seizoen</label>
-            <select id="seizoen">
-                <option value="lente">Lente</option>
-                <option value="zomer">Zomer</option>
-                <option value="herfst">Herfst</option>
-                <option value="winter">Winter</option>
-            </select>
+      <label aria-label="Kies het soort materiaal van jouw kledingstuk" for="stof">Kies een stof</label>
+      <select required id="stof">
+        <option value="">Kies een stof</option>
+        <option value="katoen">Katoen</option>
+        <option value="polyester">Polyester</option>
+        <option value="wol">Wol</option>
+        <option value="zijde">Zijde</option>
+        <option value="linnen">Linnen</option>
+        <option value="fluweel">Fluweel</option>
+        <option value="denim">Denim</option>
+        <option value="leer">Leer</option>
+        <option value="satijn">Satijn</option>
+        <option value="kant">Kant</option>
+        <option value="corduroy">Corduroy</option>
+        <option value="chiffon">Chiffon</option>
+      </select>
 
-            <label aria-label="Kies het type gelegenheid voor jouw kledingstuk" for="type-kleding">Stel het kleding-type in</label>
-            <select id="typeKleding">
-                <option value="casual">Casual</option>
-                <option value="feestelijk">Feestelijk</option>
-                <option value="zakelijk">Zakelijk</option>
-                <option value="begrafenis">begravenis</option>
-                <option value="standaard">Geen-voorkeur</option>
-            </select>
 
-            <label aria-label="Voeg eventuele kenmerken toe aan jouw kledingstuk" for="extraDetails">
-                Extra details
-            </label>
-            <textarea name="" id="extraDetails" cols="30" rows="10"></textarea>
-            <div>
-                <button role="button" type="submit" value="submit">&#43; Voeg toe</button>
-                <button role="button" type="button" id="cancel">&#x2715; Annuleer</button>
-            </div>
-        </form>
-    </main>
-    <footer>
-        <p>© Ali Ahmed 2024</p>
-    </footer>
-    <div id="backgroundImage">
-        <img src="./img/blue-pink-halftone-background-free-vector_619991-57.avif" alt="backgroundImage">
-    </div>
-    <script src="./script.js"></script>
+      <label aria-label="Kies het passende seizoen van jouw kledingstuk." for="seizoen">Kies het seizoen</label>
+      <select id="seizoen">
+        <option value="">Kies een seizoen</option>
+        <option value="lente">Lente</option>
+        <option value="zomer">Zomer</option>
+        <option value="herfst">Herfst</option>
+        <option value="winter">Winter</option>
+      </select>
+
+      <label aria-label="Kies het type gelegenheid voor jouw kledingstuk" for="type-kleding">Stel het kleding-type
+        in</label>
+      <select required id="typeKleding">
+        <option value="">Kies een stijl</option>
+        <option value="casual">Casual</option>
+        <option value="feestelijk">Feestelijk</option>
+        <option value="zakelijk">Zakelijk</option>
+        <option value="begrafenis">begravenis</option>
+        <option value="standaard">Geen-voorkeur</option>
+      </select>
+
+      <label aria-label="Voeg eventuele kenmerken toe aan jouw kledingstuk" for="extraDetails">
+        Extra details
+      </label>
+      <textarea name="" id="extraDetails" cols="30" rows="10"></textarea>
+      <div>
+        <button role="button" type="submit" value="submit">&#43; Voeg toe</button>
+        <button role="button" type="button" id="cancel">&#x2715; Annuleer</button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <p>© Ali Ahmed 2024</p>
+  </footer>
+  <div id="backgroundImage">
+    <img src="./img/blue-pink-halftone-background-free-vector_619991-57.avif" alt="backgroundImage">
+  </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>

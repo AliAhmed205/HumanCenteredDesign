@@ -65,6 +65,10 @@ header {
   }
 }
 
+#formRegister {
+  padding: 1rem 1rem 9rem;
+}
+
 main {
   height: 80vh;
 
@@ -181,6 +185,11 @@ main {
   }
 }
 
+.back {
+  display: block;
+  color: red;
+
+}
 
 
 footer {
@@ -448,7 +457,7 @@ button {
     position: absolute;
     color: red;
     display: inline-block;
-    right: 27px;
+    right: 4rem;
   }
 }
 
@@ -514,6 +523,28 @@ button {
     display: flex;
   }
 
+  button {
+    display: block;
+    width: fit-content;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-family: var(--sightless-paragraph);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    background-color: var(--sightless-font-color);
+    font-size: 1.2rem;
+    box-shadow: rgba(128, 128, 128, 0.139) 0 0 20px;
+    border-radius: 100px;
+    transition: .5s;
+    margin: 0 auto;
+  }
+
+  button:focus {
+    color: var(--sightless-font-color);
+    background-color: white;
+  }
+
   ul {
     padding: 0;
     text-align: center;
@@ -558,24 +589,63 @@ button {
     font-family: var(--sightless-paragraph);
   }
 
-  a {
-    margin: 0 7rem;
-    padding: 1rem;
-    color: var(--sightless-font-color);
-    background-color: white;
-    font-size: 1.3rem;
-    border-radius: 100px;
+  button {
+    display: block;
+    width: fit-content;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
     font-family: var(--sightless-paragraph);
     font-weight: 600;
-    border: solid 1px black;
-    text-decoration: none;
-    transition: .5s;
-  }
-
-  a:focus {
+    padding: 1rem 2rem;
     background-color: var(--sightless-font-color);
-    color: white;
+    font-size: 1.2rem;
+    box-shadow: rgba(128, 128, 128, 0.139) 0 0 20px;
+    border-radius: 100px;
+    transition: .5s;
+    margin: 0 auto;
   }
 
+  button:focus {
+    color: var(--sightless-font-color);
+    background-color: white;
+  }
+}
 
+.overzicht {
+
+  h2 {
+    font-family: var(--sightless-paragraph);
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  ul {
+
+      padding: 0 2rem;
+    li {
+      
+      list-style-type: none;
+
+      button {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: var(--sightless-font-color);
+        font-family: var(--sightless-paragraph);
+        font-weight: 600;
+        padding: 1rem 2rem;
+        background-color: white;
+        font-size: 1.2rem;
+        box-shadow: rgba(128, 128, 128, 0.139) 0 0 20px;
+        border-radius: 100px;
+        transition: .5s;
+      }
+
+      button:focus {
+        background-color: var(--sightless-font-color);
+        color: white;
+      }
+    }
+  }
 }
