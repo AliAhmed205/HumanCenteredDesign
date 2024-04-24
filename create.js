@@ -3,6 +3,9 @@ const themeContainer = document.getElementById('outfitInstellen')
 const backButtons = document.querySelectorAll('.terug')
 const clothingIds = ['hoofddeksel', 'bovenkleding', 'onderkleding', 'schoeisel', 'accessoires']
 const clothingContainer = document.getElementById('clothingOptions')
+const cancelProgress = document.getElementById('annuleer')
+let selectedClothing = [];
+
 
 // const steps = document.querySelectorAll('.step')
 
@@ -10,6 +13,7 @@ let options = {
   currentStep: 0,
   allSteps: document.querySelectorAll('.step')
 }
+
 
 function stepBack() {
   if (options.currentStep > 0) {
@@ -35,6 +39,10 @@ function stepForward() {
     const newStep = options.currentStep
     options.allSteps[newStep].style.display = 'block'
   }
+}
+
+function addToSelectedClothing(clothingItem) {
+  selectedClothing.push(clothingItem);
 }
 
 themeIds.forEach(themeId => {
@@ -83,18 +91,47 @@ function addToOverviewList(itemText) {
 }
 
 
-
 clothingIds.forEach(clothingId => {
   const clothingBtn = document.getElementById(clothingId)
+
 
   clothingBtn.addEventListener('click', () => {
 
     clothingContainer.style.display = 'none'
 
+    const overzichtItem = document.querySelector('.overzicht')
+
+    if (overzichtItem) {
+      overzichtItem.style.display = "none"
+    }
+
     const theme = localStorage.getItem('theme') // Haal het gekozen thema op uit localStorage
     const type = clothingId
 
     const savedFormData = JSON.parse(localStorage.getItem('formData'))
+
+
+    // Haal opgeslagen gegevens op en controleer of deze bestaan
+    if (!savedFormData) {
+      // Geen gegevens beschikbaar, toon een foutmelding
+      const main = document.querySelector('main');
+      const noDataContainer = document.createElement('section');
+      // const overzichtSection = document.querySelector('.overzicht')
+      noDataContainer.classList.add('noResults');
+      const noData = document.createElement('p');
+      noData.textContent = 'Er zijn geen opgeslagen gegevens beschikbaar voor het gekozen thema en kledingstype.';
+      const backButton = document.createElement('button');
+      backButton.textContent = 'Terug';
+      backButton.addEventListener('click', () => {
+        noDataContainer.remove();
+        clothingContainer.style.display = 'block';
+      });
+      noDataContainer.appendChild(noData);
+      noDataContainer.appendChild(backButton);
+      main.appendChild(noDataContainer);
+      return; // Stop de functie hier
+    }
+
 
     // Filter op het gekozen thema
     const filtered = savedFormData.filter(item => {
@@ -107,19 +144,15 @@ clothingIds.forEach(clothingId => {
     const ulEl = document.createElement('ul')
 
 
-    // const overzicht = document.createElement('section')
-    // overzicht.classList.add('overzicht')
-    // const overzichtLijst = document.createElement('ul')
 
     const backButton = document.createElement('button')
     backButton.textContent = 'Terug'
     backButton.addEventListener('click', () => {
       resultSection.remove()
       clothingContainer.style.display = "block"
-      if(overzicht){
-        overzicht.remove()
-      }
     })
+
+
 
     if (filtered.length === 0) {
       // Geen optie beschikbaar
@@ -134,6 +167,8 @@ clothingIds.forEach(clothingId => {
         clothingContainer.style.display = "block"
       })
 
+
+
       noItemContainer.appendChild(noItem)
       noItemContainer.appendChild(backButton)
 
@@ -146,45 +181,39 @@ clothingIds.forEach(clothingId => {
         btnEl.type = 'button'
         btnEl.innerHTML = `${hexToColorName(filterItem.kleur)} ${filterItem.kledingstuk}`
 
+
         localStorage.setItem('kledingstuk', filterItem.kledingstuk)
         localStorage.setItem('kleur', filterItem.kleur)
         const extraDetails = localStorage.setItem('extraDetails', filterItem.extraDetails)
 
         btnEl.addEventListener("click", () => {
           resultSection.remove();
+
           clothingContainer.style.display = 'flex'
+
+          if (overzichtItem) {
+            overzichtItem.style.display = 'block'
+          }
 
           if (!hasOverviewSection()) {
             createOverviewSection();
           }
 
+          const overzicht = document.querySelector('.overzicht')
+
+          // if(overzicht === "block"){
+
+          // }
+
           // Voeg de gekozen kleding toe aan de lijst van gekozen kleding
           const overzichtLijstItem = document.createElement('li')
-          // const overzichTitel = document.createElement('h2')
-
-
-          // if (!extraDetails) {
-          //   overzichtLijstItem.innerHTML = `<button aria-label="${hexToColorName(localStorage.getItem('kleur'))} ${localStorage.getItem('extraDetails')}  ${localStorage.getItem('kledingstuk')}" class="addedClothing" data-id=${clothingId}> ${hexToColorName(localStorage.getItem('kleur'))} ${localStorage.getItem('extraDetails')}  ${localStorage.getItem('kledingstuk')}<span aria-label="Verwijder kledingstuk">&#10005</span></button>`
-          // } else {
-          //   overzichtLijstItem.innerHTML = `<button aria-label="${hexToColorName(localStorage.getItem('kleur'))} ${localStorage.getItem('kledingstuk')}" class="addedClothing" data-id=${clothingId}>  ${hexToColorName(localStorage.getItem('kleur'))} ${localStorage.getItem('kledingstuk')}<span aria-label="Verwijder kledingstuk">&#10005</span></button>`
-          // }
-
-          // overzichTitel.innerHTML = `<h2>Jouw kledingkeus overzicht<h2>`
-
-          // overzicht.appendChild(overzichTitel)
-          // overzichtLijst.appendChild(overzichtLijstItem)
-          // overzicht.appendChild(overzichtLijst)
-
-           // if (!extraDetails) {
-          //   overzichtLijstItem.innerHTML = `<button aria-label="${hexToColorName(localStorage.getItem('kleur'))} ${localStorage.getItem('extraDetails')}  ${localStorage.getItem('kledingstuk')}" class="addedClothing" data-id=${clothingId}> ${hexToColorName(localStorage.getItem('kleur'))} ${localStorage.getItem('extraDetails')}  ${localStorage.getItem('kledingstuk')}<span aria-label="Verwijder kledingstuk">&#10005</span></button>`
-          // } else {
-          //   overzichtLijstItem.innerHTML = `<button aria-label="${hexToColorName(localStorage.getItem('kleur'))} ${localStorage.getItem('kledingstuk')}" class="addedClothing" data-id=${clothingId}>  ${hexToColorName(localStorage.getItem('kleur'))} ${localStorage.getItem('kledingstuk')}<span aria-label="Verwijder kledingstuk">&#10005</span></button>`
-          // }
 
           const clothingElement = document.getElementById(clothingId)
           if (clothingElement) {
             clothingElement.parentElement.classList.add('hidden')
           }
+
+
 
           // const theme = localStorage.getItem('theme');
           const color = hexToColorName(localStorage.getItem('kleur'));
@@ -196,22 +225,38 @@ clothingIds.forEach(clothingId => {
             itemText = `<button aria-label="${color} ${clothing}" class="addedClothing" data-id=${clothingId}>  ${color} ${extraDetails} ${clothing}<span aria-label="Verwijder kledingstuk">&#10005</span></button>`;
           }
 
+          addToOverviewList(itemText);
+
+          const textChange = clothingContainer.querySelector('h2')
+
+
+          const addedClothing = document.querySelectorAll('.addedClothing')
+
+
           // Voeg eventlistener toe om kledingstukken te kunnen verwijderen
-          const addedClothing = overzichtLijstItem.querySelectorAll('.addedClothing')
           addedClothing.forEach(item => {
             item.addEventListener('click', () => {
-              console.log('verwijder')
               const id = item.dataset.id
               const clothingElement = document.getElementById(id)
+
+
               if (clothingElement) {
                 clothingElement.parentElement.classList.remove('hidden')
               }
-              item.remove()
+              const overzichtOptie = document.querySelector('.overzicht')
+              const parent = item.parentElement
+              if(overzichtOptie){
+              parent.remove()
+              const ulOverzicht = overzichtOptie.querySelector('ul li')
+
+              if (!ulOverzicht) {
+                overzichtOptie.remove()
+              }
+            }
             })
           })
-
-          addToOverviewList(itemText);
         })
+
 
         if (filterItem.extraDetails) {
           btnEl.innerHTML += ` - ${filterItem.extraDetails}`
@@ -262,12 +307,6 @@ clothingIds.forEach(clothingId => {
       resultSection.appendChild(ulEl)
       resultSection.appendChild(backButton)
       main.appendChild(resultSection)
-
-      // Voeg de overzichtssectie toe bovenaan de clothingContainer
-
-      // overzicht.appendChild(overzichtLijst)
-      // clothingContainer.insertBefore(overzicht, clothingContainer.firstChild)
-
 
     }
   })

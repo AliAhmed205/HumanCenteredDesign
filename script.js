@@ -26,9 +26,12 @@ window.addEventListener('DOMContentLoaded', function () {
             saveFormData(kledingFormulier); // Roep de functie aan om de formuliergegevens op te slaan
 
             // Alert weergeven
-            alert('Kledingstuk toegevoegd!');
+            alert("Kledingstuk toegevoegd! De pagina wordt nu vernieuwd zodat je nog meer kunt toevoegen.");
 
             kledingFormulier.reset();
+            window.location.href = "index.html"
+
+
 
 
             // Redirect naar index.html na het verzenden van het formulier
@@ -36,6 +39,10 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+cancelBtn.addEventListener('click', ()=> {
+  window.location.href = "index.html"
+})
 
 const clothingTypes = {
     't-shirt': 'bovenkleding',

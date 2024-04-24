@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <header>
+    <header aria-hidden="true">
         <nav>
             <a href="index.html" aria-label="Terug naar de vorige pagina.">&#8249;</a>
-            <h1>Sightless</h1>
+            <h1 role="text" aria-label="saaitles">Sightless</h1>
             <p>Blind in stijl, nooit uit de mode.</p>
         </nav>
     </header>
@@ -24,10 +24,14 @@
 
       
         <!------------------ Outfit instellen --------------->
-        <section id="outfitInstellen" class="step">
-            <h1>Creëer een outfit</h1>
-            <h2>Welkom, Petra. Ik help je graag bij het samenstellen van je outfit. Je kunt navigeren door naar links
+        <span class="screen-reader-text">Leuk! Laten we beginnen.</span>
+        <section aria-live="polite" id="outfitInstellen" class="step">
+            <h1 role="text"  aria-hidden="true">Creëer een outfit</h1>
+            <span class="screen-reader-text">Creëer een outfit</span>
+            <h2 role="text" aria-hidden="true">Welkom, Petra. Ik help je graag bij het samenstellen van je outfit. Je kunt navigeren door naar links
                 te vegen om omhoog te gaan en naar rechts om omlaag te gaan.</h2>
+                <span class="screen-reader-text">Welkom, Petra. Ik help je graag bij het samenstellen van je outfit. Je kunt navigeren door naar links
+                te vegen om omhoog te gaan en naar rechts om omlaag te gaan.</span>
             <ul>
                 <!---- Casual optie--->
                 <li><button id="casual" aria-label="Casual. Iets allerdaags maar nog wel stijlvol"
@@ -49,6 +53,7 @@
                 <li><button id="standaard" aria-label="Geen-voorkeur. Alle kledingstijlen beschikbaar"
                         value="standaard">Geen-voorkeur</button></li>
             </ul>
+            <a href="/index.html">Annuleer</a>
         </section>
 
         <section id="clothingOptions" class="step">
@@ -59,7 +64,7 @@
                     <li><button id="onderkleding" type="button">Onderkleding</button></li>
                     <li><button id="schoeisel" type="button">Schoeisel</button></li>
                     <li><button id="accessoires" type="button">Accessoires</button></li>
-                    <li><button class="terug" type="button">Terug</button></li>
+                    <li><a href="/create.html" id="annuleer" type="button">Annuleer</button></li>
                 </ul>
             </section>
             
