@@ -1,5 +1,5 @@
 
-<img width="60%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/bdb6d25b-9cd7-46e8-b379-770fba55b6e2">
+<img width="40%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/bdb6d25b-9cd7-46e8-b379-770fba55b6e2">
 <br>
 <br>
 <p>Welcome to the README for <b>Sightless</b>, the fashion and clothing app designed for the visually impaired. You've heard the old saying: 'Fashion is blind', but that doesn't mean it lacks style. <b>Sightless</b> challenges this notion, offering its users the opportunity to dazzle others with their fashionable outfits. Powered by <b>Sightless'</b> survey, curated by talented fashion designers.</p> 
