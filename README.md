@@ -33,6 +33,12 @@
 git clone https://github.com/AliAhmed205/HumanCenteredDesign.git
 ```
 
-## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2">  Use Sightless
+## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2">  Author
 
+<p>This app was made by <b>Ali Ahmed</b></p>
+
+## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2">  License 
+
+<p>Copyright © 2024 Ali Ahmed</p>
+<p><b>This project has an MIT license</b></p>
 
