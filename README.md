@@ -1,14 +1,19 @@
-# <p><img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2"> Sightless</p>
 
+<img width="60%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/bdb6d25b-9cd7-46e8-b379-770fba55b6e2">
+<br>
+<br>
 <p>Welcome to the README for <b>Sightless</b>, the fashion and clothing app designed for the visually impaired. You've heard the old saying: 'Fashion is blind', but that doesn't mean it lacks style. <b>Sightless</b> challenges this notion, offering its users the opportunity to dazzle others with their fashionable outfits. Powered by <b>Sightless'</b> survey, curated by talented fashion designers.</p> 
+
+<p><img width="600" alt="Scherm­afbeelding 2024-04-25 om 01 21 04" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/4130ae87-0e38-4911-b3fc-b6bcb61c0163">
+<img width="400" alt="Scherm­afbeelding 2024-04-25 om 01 24 15" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/0eaae5d0-0e7e-45df-8ac7-67f15bc8077f"></p>
+
 
 ## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2"> Features 
 
-|  Features | 
+|             | 
 | ----------- | 
 | Register your new clothes | 
 | Filter through your own digital closet |
-| Generate a fitting outfit |
 | Added sound effects responding to details |
 | Find nearby stores to buy clothes |
 | Set-up your own respective UI |
@@ -18,31 +23,16 @@
 ## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2"> Why Sightless? 
 <p>The choice of the name "Slightless" for a fashion and clothing app for the visually impaired holds a profound significance. The word "Slightless" cleverly combines "sight" and "less," encapsulating the essence of the app's purpose. By catering to individuals who may lack full sight, "Slightless" embodies the idea of transcending physical limitations and embracing inclusivity. It communicates the message that despite visual impairment, one can still engage with and enjoy fashion. Additionally, the name suggests a sense of empowerment, as users can navigate the world of fashion confidently and independently through the app, regardless of their visual abilities.
 
-## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2">  How is Sightless made? 
+<p>Petra Huidink-de Jong, who was born blind, was given the opportunity to test Sightless, to offer feedback, insights and perhaps <b>overlooked</b> details I missed myself. Suffice it to say that she was satisified with the end result. She quote-unqoute said that she would download <b>Sightless</b> if it was an actual downloadable app. Tastes do definitely differ, but Sightless gives it users feedback based on survey results, given to world renowned fashionista's. The research doesn't end there, as I visited several fashion sites, reading about the do's and dont's. What colors blend? What kind of clothes are definite "No-No". All these inputs effected Sightless'algorithm to offer its user a form of security and trust.</p>
 
-<p>With the help of standard HTML, CSS and JavaScript, Sightless was created. While the real thing would be linked to an actual database, this demo of Sightless saves the user's clothing in the localStorage. It also retrieves the user's data from the storage, displaying it in a JSON-like fahsion for a clear presentation.</p>
+## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2">  Use Sightless
 
-### Saving the data
+<p>While some of Sightless' kinks are being worked on, there are two existing flows that can offer you the idea of how the app could potentially work. Make sure you choose "feestelijk" when you're in the `Creëer een Outfit` route. You can either go for a stylish blazer or for a more reminsicing christmas vibe.</p>
 
-```JS
-const savedFormData = JSON.parse(localStorage.getItem('formData'));
- 
-let savedData = JSON.parse(localStorage.getItem('formData'));
-
-    if (!Array.isArray(savedData)) {
-        savedData = [];
-    }
-
-savedData.push(newFormData);
-
+```CODE
+git clone https://github.com/AliAhmed205/HumanCenteredDesign.git
 ```
 
-### Retrieving the data 
-
-```JS
-window.addEventListener('DOMContentLoaded', function () {
-    displaySavedFormData();
-});
-```
+## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2">  Use Sightless
 
 
