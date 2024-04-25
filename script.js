@@ -40,9 +40,12 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-cancelBtn.addEventListener('click', ()=> {
-  window.location.href = "index.html"
-})
+if(cancelBtn){
+  cancelBtn.addEventListener('click', ()=> {
+    window.location.href = "index.html"
+  })
+}
+
 
 const clothingTypes = {
     't-shirt': 'bovenkleding',
