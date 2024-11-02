@@ -2,7 +2,7 @@
 <img width="60%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/bdb6d25b-9cd7-46e8-b379-770fba55b6e2">
 <br>
 <br>
-<p>Welcome to the README for <b>Sightless</b>, the fashion and clothing app designed for the visually impaired. You've heard the old saying: 'Fashion is blind', but that doesn't mean it lacks style. <b>Sightless</b> challenges this notion, offering its users the opportunity to dazzle others with their fashionable outfits. Powered by <b>Sightless'</b> survey, curated by talented fashion designers.</p> 
+Welcome to the README for Sightless, the fashion app for the visually impaired. You’ve heard the saying, “Fashion is blind,” but that doesn’t mean it lacks style. Sightless embraces this idea, giving users the chance to impress with curated, stylish outfits based on surveys and expert input from top fashion designers.
 
 <p><img width="45%" alt="Scherm­afbeelding 2024-04-25 om 01 21 04" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/b68b0221-1791-4385-96d1-9d7e700db1dc">
 <img width="45%" alt="Scherm­afbeelding 2024-04-25 om 01 24 15" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/0eaae5d0-0e7e-45df-8ac7-67f15bc8077f"></p>
@@ -10,22 +10,17 @@
 
 ## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2"> Features 
 
-|             | 
-| ----------- | 
-| Register your new clothes | 
-| Filter through your own digital closet |
-| Added sound effects responding to details |
-| Find nearby stores to buy clothes |
-| Set-up your own respective UI |
+| Feature | Description |
+| :-- | :--- |
+| Register New Clothes | Allows users to log new clothing items into their digital closet. |
+| Digital Closet Filter | Enables easy filtering and organization of items in the digital closet. |
+| Audio Feedback | Provides sound effects that respond to specific clothing details for a more immersive experience. |
+| Nearby Store Locator | Helps users find nearby stores that sell clothing. |
+| Customizable Interface | Allows users to personalize the app’s interface to their preferences. |
 
-<p>The app offers a comprehensive set of features tailored to enhance the fashion experience for the visually impaired. Users can effortlessly register their new clothes, organizing them within their digital closet for easy access. Through intuitive filtering options, finding specific items becomes seamless. The outfit generator feature presents users with stylish ensemble suggestions, leveraging their existing wardrobe. Moreover, the inclusion of sound effects responding to clothing details adds an immersive element to the experience. Beyond personal styling, the app also facilitates shopping by locating nearby stores selling clothes. Additionally, users have the flexibility to customize their interface according to their preferences, ensuring a personalized and user-friendly experience.</p>
+The "Sightless" app is designed to make fashion more accessible for visually impaired users. It lets users organize their clothes in a digital closet, generates outfit ideas, and uses sound cues to describe clothing details. The app also helps locate nearby clothing stores and allows for interface customization.
 
-## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2"> Why Sightless? 
-<p>Petra Huidink-de Jong, who was born blind. She navigates through several tools, including a braille keyboard and a screen reader. These devices are designed to convert visual designs into usable information for her. However, much is lost in translation because not everything can be converted, or it works very inefficiently. Petra works at <b>Cliëntenbelang Amsterdam</b> as a policy officer for Accessibility and Mobility and also runs her own translation agency. Additionally, she volunteers at the listening line and enjoys sports.</p>
-
-<p>The choice of the name "Slightless" for a fashion and clothing app for the visually impaired holds a profound significance. The word "Slightless" cleverly combines "sight" and "less," encapsulating the essence of the app's purpose. By catering to individuals who may lack full sight, "Slightless" embodies the idea of transcending physical limitations and embracing inclusivity. It communicates the message that despite visual impairment, one can still engage with and enjoy fashion. Additionally, the name suggests a sense of empowerment, as users can navigate the world of fashion confidently and independently through the app, regardless of their visual abilities.
-
-<p>Petra had the opportunity to test Sightless, providing valuable feedback and insights that I may have overlooked. She expressed satisfaction with the end result, mentioning that she would download Sightless if it were an actual app. Preferences vary, but Sightless provides feedback to users based on survey results from world-renowned fashionistas. Additionally, extensive research was conducted by visiting various fashion sites to understand color blending, fashion dos and don'ts, and more. These inputs influenced Sightless's algorithm to offer users a sense of security and trust.</p>
+The name "Sightless" combines "sight" and "less," emphasizing inclusion and confidence. Petra Huidink-de Jong, a blind accessibility expert, tested the app and appreciated its features. Her feedback, along with research on color coordination and fashion advice, helped improve the app’s recommendations, making it both trustworthy and easy to use.
 
 ## <img width="3%" src="https://github.com/AliAhmed205/HumanCenteredDesign/assets/118130116/6ad03eea-f8f4-4b48-80a5-3115b7817ce2">  Use Sightless
 
